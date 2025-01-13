@@ -31,7 +31,7 @@ class Student(models.Model):
 
     name = models.CharField(max_length=255)
     surname = models.CharField(max_length=255)
-    birthday_day = models.DateField(null=True)
+    birthday_day = models.DateField(null=True, blank=True)
     clas = models.ForeignKey(Class, null=False, blank=False,
                              on_delete=models.CASCADE)
     group = models.CharField(max_length=3, choices=Group.choices)
